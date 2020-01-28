@@ -1,6 +1,29 @@
 .header{
-    height: 90vh;
-    width: 100vh;
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    background-image: url(dist/css/santorini.webp);
+}
+
+.cover-image{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    background-image: url(../media/santorini1.jpg);
+    background-size: cover;
+    background-position: top;
+    margin: 10px;
+}
+
+.blur-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blur{
+    background: rgba(230, 230, 234, 0.21);
+    backdrop-filter: blur(10px);
+    width: 30rem;
+    height: 100vh;
 }
