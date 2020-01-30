@@ -13,7 +13,6 @@
   background-image: url(../media/santorini1.jpg);
   background-size: cover;
   background-position: top;
-  margin: 10px;
 }
 
 .blur-container {
@@ -37,9 +36,39 @@
   font-family: "Signika", sans-serif;
   color: white;
   font-size: 10rem;
-  padding: 1rem;
+  text-align: center;
+  /*
+  animation-name: title-float-in;
+  animation-duration: 1s;
+  */
   @include laptop {
     font-size: 15rem;
     padding: 0px;
+    transition: 0.3s;
   }
 }
+
+/*
+@keyframes title-float-in {
+  0% {
+  transform: scale(5);
+    opacity: 20%;
+  }
+  50% {
+  transform: scale(3);
+    opacity: 50%;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+*/
+
+.title-text:hover {
+  @include laptop {
+    transform: translate(0%, -20%);
+    filter: drop-shadow(1rem 3rem 5px rgba(0, 0, 0, 0.62));
+  }
+}
+
