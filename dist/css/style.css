@@ -20,7 +20,7 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(../media/santorini1.jpg);
+  background-image: url(../media/santorini-optimized.jpg);
   background-size: cover;
   background-position: top;
 }
@@ -39,7 +39,12 @@ html {
           justify-content: space-between;
 }
 
-@media (min-width: 900px) {
+.blur {
+  width: 100vw;
+  height: 10rem;
+}
+
+@media (min-width: 1100px) {
   .blur {
     background: rgba(230, 230, 234, 0.21);
     -webkit-backdrop-filter: blur(10px);
@@ -54,13 +59,13 @@ html {
   color: white;
   font-size: 10rem;
   text-align: center;
-  /*
-  animation-name: title-float-in;
-  animation-duration: 1s;
-  */
+  -webkit-animation-name: title-float-in;
+          animation-name: title-float-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1100px) {
   .title-text {
     font-size: 15rem;
     padding: 0px;
@@ -69,28 +74,64 @@ html {
   }
 }
 
-/*
-@keyframes title-float-in {
+@-webkit-keyframes title-float-in {
   0% {
-  transform: scale(5);
     opacity: 20%;
   }
   50% {
-  transform: scale(3);
     opacity: 50%;
   }
   100% {
-    transform: scale(1);
     opacity: 100%;
   }
 }
-*/
-@media (min-width: 900px) {
+
+@keyframes title-float-in {
+  0% {
+    opacity: 20%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@media (min-width: 1100px) {
   .title-text:hover {
     -webkit-transform: translate(0%, -20%);
             transform: translate(0%, -20%);
     -webkit-filter: drop-shadow(1rem 3rem 5px rgba(0, 0, 0, 0.62));
             filter: drop-shadow(1rem 3rem 5px rgba(0, 0, 0, 0.62));
+  }
+}
+
+@media (min-width: 1100px) {
+  .splash-button-container {
+    height: 10rem;
+    width: 30rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.splash-button {
+  height: 0rem;
+  width: 0rem;
+}
+
+@media (min-width: 1100px) {
+  .splash-button {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
