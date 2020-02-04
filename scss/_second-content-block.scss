@@ -1,0 +1,16 @@
+@import "./_variables.scss";
+
+.second-content-block {
+    height: 100vh;
+    width: 99vw;
+    display: flex;
+    justify-content: center;
+  }
+      
+  .second-content-block-background{   
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../media/sunset.jpg);
+    background-size: cover;
+  }
+  
