@@ -13,7 +13,13 @@
   background-image: url(../media/sunset.jpg);
   background-size: cover;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  @include desktop{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 
 .explore-outline {
@@ -25,34 +31,88 @@
   margin: 0;
   display: flex;
   justify-content: center;
-  @include desktop{
+  @include desktop {
     width: 50rem;
     height: 15rem;
+    justify-content: center;
+    transition: 0.5s;
   }
 }
 
-.explore-container{
-  width: 20rem;
+.explore-container {
+  width: 82vw;
   height: 8rem;
-  padding: 5rem;
-  @include desktop{
-    width: 40rem;
+  justify-content: center;
+  display: flex;
+  animation: none;
+  padding: 3rem;
+  @include desktop {
+    width: 93vw;
     height: 16rem;
     justify-content: center;
+    display: flex;
+    padding: 5rem;
   }
 }
 
-.explore{
+.explore {
   margin: 0;
   color: white;
   font-size: 4rem;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   height: 5rem;
   align-self: center;
   text-transform: uppercase;
-  @include desktop{
-    font-size: 10rem;
+  @include desktop {
+    font-size: 9rem;
     margin: 0;
-    height: 11.5rem;
+    height: 10rem;
+    transition: 0.5s;
+  }
+}
+
+
+
+.explore-outline:hover{
+  @include desktop{
+    transform: scale(1.3);
+  }
+  @include laptop{
+    transform: scale(1.3);
+  }
+}
+
+.explore:hover {
+  @include desktop {
+    transform: scale(1.4);
+  }
+  @include laptop {
+    transform: scale(1.4);
+  }
+}
+
+.rotating-cards-container {
+  width: 99vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+flex-direction: column;
+  @include desktop{
+  width: 99vw;
+  height: 80vh; 
+  flex-direction: row;
+  justify-content: space-around;
+  }
+}
+
+.card{
+  height: 20rem;
+  width: 30rem;
+  background-color: white;
+  @include desktop{
+  height: 50rem;
+  width: 40rem;
+ 
   }
 }
