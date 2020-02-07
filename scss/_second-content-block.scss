@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   margin: 0;
+  @include desktop{
+    width: 99vw;
+  }
 }
 
 .second-content-block-background {
@@ -21,6 +24,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    width: 99vw;
   }
 }
 
@@ -47,7 +51,7 @@
   justify-content: center;
   display: flex;
   animation: none;
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 0 0 0;
   @include desktop {
     width: 93vw;
     height: 16rem;
@@ -96,6 +100,7 @@
 .rotating-cards-container {
   width: 99vw;
   height: 100vh;
+  padding: 3rem 0 3rem 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -105,15 +110,68 @@ flex-direction: column;
   height: 80vh; 
   flex-direction: row;
   justify-content: space-around;
+  padding: 0;
   }
 }
 
 .card{
   height: 20rem;
   width: 30rem;
-  background-color: white;
   @include desktop{
   height: 50rem;
   width: 40rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
   }
 }
+
+.card-side{
+  @include desktop{
+  height: 50rem;
+  width: 40rem;
+  background-color: white;
+  font-size: 15px;
+  backface-visibility: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(0,0,0,.15);
+  }
+}
+
+.card-side-front{
+  background-color: white;
+  @include desktop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 1s;
+  }
+}
+
+.card-side-back{
+  background-color: blue;
+  @include desktop{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transform: rotateY(-180deg);
+  transition: all 1s;
+  }
+}
+
+.card:hover .card-side-front{
+  transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back{
+  transform: rotateY(0deg);
+}
+
+.card-text-container{
+  height: 20rem;
+  width: 30rem;
+}
+
+.card-text{
+  text-align: center;

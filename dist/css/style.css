@@ -26,6 +26,12 @@ body {
   margin: 0rem;
 }
 
+@media (min-width: 1100px) {
+  .header {
+    width: 99vw;
+  }
+}
+
 .cover-image {
   height: 100vh;
   width: 100vw;
@@ -37,6 +43,12 @@ body {
   background-position: top;
   padding: 0rem;
   margin: 0rem;
+}
+
+@media (min-width: 1100px) {
+  .cover-image {
+    width: 99vw;
+  }
 }
 
 .blur-container {
@@ -268,6 +280,12 @@ body {
   margin: 0;
 }
 
+@media (min-width: 1100px) {
+  .second-content-block {
+    width: 99vw;
+  }
+}
+
 .second-content-block-background {
   height: 100vh;
   width: 100vw;
@@ -298,6 +316,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 99vw;
   }
 }
 
@@ -341,7 +360,7 @@ body {
   display: flex;
   -webkit-animation: none;
           animation: none;
-  padding: 3rem 0 3rem 0;
+  padding: 3rem 0 0 0;
 }
 
 @media (min-width: 1100px) {
@@ -411,6 +430,7 @@ body {
 .rotating-cards-container {
   width: 99vw;
   height: 100vh;
+  padding: 3rem 0 3rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -436,19 +456,83 @@ body {
             flex-direction: row;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    padding: 0;
   }
 }
 
 .card {
   height: 20rem;
   width: 30rem;
-  background-color: white;
 }
 
 @media (min-width: 1100px) {
   .card {
     height: 50rem;
     width: 40rem;
+    -webkit-perspective: 150rem;
+            perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
   }
+}
+
+@media (min-width: 1100px) {
+  .card-side {
+    height: 50rem;
+    width: 40rem;
+    background-color: white;
+    font-size: 15px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  }
+}
+
+.card-side-front {
+  background-color: white;
+}
+
+@media (min-width: 1100px) {
+  .card-side-front {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+}
+
+.card-side-back {
+  background-color: blue;
+}
+
+@media (min-width: 1100px) {
+  .card-side-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+}
+
+.card:hover .card-side-front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .card-side-back {
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.card-text-container {
+  height: 20rem;
+  width: 30rem;
 }
 /*# sourceMappingURL=style.css.map */
