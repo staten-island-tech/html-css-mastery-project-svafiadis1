@@ -186,6 +186,9 @@ flex-direction: column;
 
 .card:hover .card-side-back{
   transform: rotateY(0deg);
+  @include desktop{
+  transform: rotateY(0deg);
+  }
 }
 
 .card-text{
