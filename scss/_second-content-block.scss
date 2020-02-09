@@ -181,29 +181,11 @@ flex-direction: column;
 }
 
 .card:hover .card-side-front{
-  @include desktop{
   transform: rotateY(-180deg);
-  }
 }
 
 .card:hover .card-side-back{
-  @include desktop{
   transform: rotateY(0deg);
-  }
-}
-
-.card:active .card-side-front{
-  transform: rotateY(-180deg);
-  @include desktop{
-    transform: none;
-  }
-}
-
-.card:active .card-side-back{
-  transform: rotateY(0deg);
-  @include desktop{
-    transform: none;
-  }
 }
 
 .card-text{
