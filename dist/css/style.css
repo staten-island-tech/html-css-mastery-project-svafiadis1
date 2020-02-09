@@ -286,6 +286,12 @@ body {
   }
 }
 
+@media (min-width: 900px) {
+  .second-content-block {
+    width: 99vw;
+  }
+}
+
 .second-content-block-background {
   height: 100vh;
   width: 100vw;
@@ -316,6 +322,12 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    width: 99vw;
+  }
+}
+
+@media (min-width: 900px) {
+  .second-content-block-background {
     width: 99vw;
   }
 }
@@ -374,6 +386,12 @@ body {
     display: -ms-flexbox;
     display: flex;
     padding: 5rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .explore-container {
+    padding: 3rem;
   }
 }
 
@@ -463,16 +481,40 @@ body {
 .card {
   height: 20rem;
   width: 30rem;
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+}
+
+@media (min-width: 900px) {
+  .card {
+    width: 30rem;
+    height: 45rem;
+  }
 }
 
 @media (min-width: 1100px) {
   .card {
     height: 50rem;
     width: 40rem;
-    -webkit-perspective: 150rem;
-            perspective: 150rem;
-    -moz-perspective: 150rem;
-    position: relative;
+  }
+}
+
+.card-side {
+  height: 20rem;
+  width: 30rem;
+  background-color: white;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+          box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 900px) {
+  .card-side {
+    width: 30rem;
+    height: 45rem;
   }
 }
 
@@ -480,59 +522,147 @@ body {
   .card-side {
     height: 50rem;
     width: 40rem;
-    background-color: white;
     font-size: 15px;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
-            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   }
 }
 
 .card-side-front {
   background-color: white;
-}
-
-@media (min-width: 1100px) {
-  .card-side-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    -webkit-transition: all 1s;
-    transition: all 1s;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .card-side-back {
-  background-color: blue;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (min-width: 1100px) {
   .card-side-back {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-    -webkit-transform: rotateY(-180deg);
-            transform: rotateY(-180deg);
-    -webkit-transition: all 1s;
-    transition: all 1s;
+    height: 50rem;
   }
 }
 
-.card:hover .card-side-front {
+@media (min-width: 1100px) {
+  .card:hover .card-side-front {
+    -webkit-transform: rotateY(-180deg);
+            transform: rotateY(-180deg);
+  }
+}
+
+@media (min-width: 1100px) {
+  .card:hover .card-side-back {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+}
+
+.card:active .card-side-front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
 }
 
-.card:hover .card-side-back {
+@media (min-width: 1100px) {
+  .card:active .card-side-front {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.card:active .card-side-back {
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
 
-.card-text-container {
-  height: 20rem;
-  width: 30rem;
+@media (min-width: 1100px) {
+  .card:active .card-side-back {
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.card-text {
+  height: 5rem;
+  width: 28rem;
+  font-size: 3rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Signika", sans-serif;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+}
+
+@media (min-width: 900px) {
+  .card-text {
+    width: 30rem;
+    font-size: 6rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card-text {
+    height: 15rem;
+    width: 40rem;
+    font-size: 7rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1100px) {
+  .card-image-container {
+    height: 35rem;
+    width: 30rem;
+  }
+}
+
+.card-paragraph {
+  font-size: 1rem;
+  font-family: "Signika", sans-serif;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1rem;
+  text-align: center;
+}
+
+@media (min-width: 1100px) {
+  .card-paragraph {
+    font-size: 2rem;
+    margin: 1rem;
+    text-align: center;
+  }
+}
+
+.card-side-back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */
