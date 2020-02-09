@@ -560,8 +560,8 @@ body {
 }
 
 .card:hover .card-side-back {
-  -webkit-transform: rotateY(0deg);
-          transform: rotateY(0deg);
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
 }
 
 @media (min-width: 1100px) {
