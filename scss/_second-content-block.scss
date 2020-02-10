@@ -12,6 +12,9 @@
   @include laptop{
     width: 99vw;
   }
+  @include tablet{
+    width: 100vw;
+  }
 }
 
 .second-content-block-background {
@@ -31,6 +34,9 @@
   }
   @include laptop{
     width: 99vw;
+  }
+  @include tablet{
+    width: 100vw;
   }
 }
 
@@ -67,6 +73,13 @@
   }
   @include laptop{
     padding: 3rem;
+  }
+  @include tablet{
+    padding: 0rem;
+  }
+  @include tablet-rotated{
+    padding: 3rem;
+    width: 94vw;
   }
 }
 
@@ -121,6 +134,15 @@ flex-direction: column;
   justify-content: space-around;
   padding: 0;
   }
+  @include tablet{
+    display: flex;
+    width: 100vw;
+    height: 70vh;
+  }
+  @include tablet-rotated{
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .card{
@@ -155,7 +177,9 @@ flex-direction: column;
   width: 40rem;
   font-size: 15px;
   }
-
+  @include tablet-rotated{
+    width: 30rem;
+  }
 }
 
 .card-side-front{
@@ -203,17 +227,28 @@ flex-direction: column;
     margin: 0;
   }
   @include desktop{
-    height: 15rem;
+    height: 20rem;
     width: 40rem;
     font-size: 7rem;
     margin: 0;
   }
+  @include tablet-rotated{
+    height: 15rem;
+    font-size: 5rem;
+  }
 }
 
 .card-image-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
   @include desktop{
-    height: 35rem;
-    width: 30rem;
+    height: 30rem;
+    width: 40rem;
+  }
+  @include tablet-rotated{
+    height: 20rem;
   }
 }
 
@@ -229,10 +264,23 @@ flex-direction: column;
   margin: 1rem;
   text-align: center;
   }
+  @include tablet-rotated{
+    font-size: 1.5rem;
+  }
 }
 
 .card-side-back{
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.card-image{
+  height: 10rem;
+  @include desktop{
+    height: 20rem;
+  }
+  @include tablet-rotated{
+    height: 15rem;
+  }
 }

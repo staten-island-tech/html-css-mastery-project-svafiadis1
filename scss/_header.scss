@@ -11,6 +11,9 @@
   @include desktop{
     width: 99vw;
   }
+  @include tablet{
+    width: 100vw;
+  }
 }
 
 .cover-image {
@@ -24,6 +27,9 @@
   margin: 0rem;
   @include desktop{
     width: 99vw;
+  }
+  @include tablet{
+    width: 100vw;
   }
 }
 

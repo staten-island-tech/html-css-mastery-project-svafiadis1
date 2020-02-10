@@ -1,6 +1,7 @@
 $desktop: 1100px;
 $laptop: 900px;
 $tablet: 600px;
+$tablet-rotated: 1000px;
 
 @mixin desktop{
     @media(min-width: #{$desktop}){
@@ -20,3 +21,8 @@ $tablet: 600px;
     }
   }
 
+  @mixin tablet-rotated{
+    @media(min-width: #{$tablet-rotated}){
+      @content;
+    }
+  }
