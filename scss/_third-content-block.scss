@@ -1,0 +1,40 @@
+@import "./_variables.scss";
+
+.third-content-block {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    padding: 0rem;
+    margin: 0rem;
+    @include desktop{
+      width: 99vw;
+    }
+    @include tablet{
+      width: 100vw;
+    }
+  }
+
+  .staircase-container{
+    background-image: url(../media/blue-gate.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 40vw;
+    padding: 0rem;
+    margin: 0rem;
+    background-position: bottom;
+  }
+
+  .adventure-text-container{
+    height: 100vh;
+    width: 60vw;
+    justify-content: center;
+    align-items: center;
+    padding: 0rem;
+    margin: 0rem;
+    display: flex;
+  }
+
+  .adventure-text{
+    font-family: 'Bad Script', cursive;
+    font-size: 10rem;
+  }

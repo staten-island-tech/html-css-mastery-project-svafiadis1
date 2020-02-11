@@ -51,6 +51,11 @@
     backdrop-filter: blur(10px);
     width: 30rem;
     height: 100vh;
+  } 
+  @include tablet-rotated{
+    width: 20rem;
+    justify-content: center;
+    display: flex;
   }
   @include desktop {
     background: rgba(230, 230, 234, 0.21);
@@ -58,6 +63,7 @@
     width: 30rem;
     height: 100vh;
   }
+
 }
 
 @keyframes blur-fade-in {
