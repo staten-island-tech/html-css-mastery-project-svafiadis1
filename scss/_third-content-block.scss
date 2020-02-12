@@ -6,35 +6,95 @@
     display: flex;
     padding: 0rem;
     margin: 0rem;
-    @include desktop{
-      width: 99vw;
-    }
+    flex-direction: column-reverse;
     @include tablet{
       width: 100vw;
+      flex-direction: row;
+    }
+    @include desktop{
+      width: 99vw;
+      flex-direction: row;
     }
   }
 
   .staircase-container{
     background-image: url(../media/blue-gate.jpg);
     background-size: cover;
-    height: 100vh;
-    width: 40vw;
+    height: 60vh;
+    width: 100vw;
     padding: 0rem;
     margin: 0rem;
     background-position: bottom;
+    transition: 0.5s;
+    @include laptop{
+      height: 100vh;
+    }
+    @include desktop{
+      width: 40vw;
+      filter: sepia(20%);
+    }
   }
 
   .adventure-text-container{
-    height: 100vh;
-    width: 60vw;
+    height: 40vh;
+    width: 100vw;
     justify-content: center;
+    text-align: center;
     align-items: center;
     padding: 0rem;
     margin: 0rem;
     display: flex;
+    @include laptop{
+      height: 100vh;
+    }
+    @include desktop{
+      width: 60vw;
+    }
   }
 
   .adventure-text{
     font-family: 'Bad Script', cursive;
-    font-size: 10rem;
+    font-size: 5rem;
+    transition: 1s;
+    position: relative;
+    @include laptop{
+      font-size: 9rem;
+    }
+    @include desktop{
+      font-size: 10rem;
+      z-index: 1;
+    }
+  }
+
+  .adventure-text:hover{
+    @include laptop{
+      opacity: 0;
+    }
+    @include desktop{
+      opacity: 0;
+    }
+  }
+  
+  .adventure-paragraph{
+    position: absolute;
+    opacity: 0;
+    @include desktop{
+      z-index: 0;
+      font-size: 3rem;
+      height:40rem;
+      padding: 3rem;
+      width: 50vw;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      transition: 1rem;
+    }
+  }
+
+  #a1:hover #a2{
+    opacity: 1;
+  }
+
+  .staircase-container:hover{
+    filter: none;
   }
