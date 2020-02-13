@@ -861,9 +861,10 @@ body {
 .adventure-text {
   font-family: 'Bad Script', cursive;
   font-size: 5rem;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 900px) {
@@ -875,47 +876,52 @@ body {
 @media (min-width: 1100px) {
   .adventure-text {
     font-size: 10rem;
-    z-index: 1;
   }
 }
 
-@media (min-width: 900px) {
-  .adventure-text:hover {
-    opacity: 0;
-  }
-}
-
-@media (min-width: 1100px) {
-  .adventure-text:hover {
-    opacity: 0;
-  }
+.adventure-text:hover {
+  opacity: 0;
 }
 
 .adventure-paragraph {
   position: absolute;
   opacity: 0;
+  font-family: Work Sans;
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  font-size: 1.8rem;
+  z-index: 0;
+}
+
+@media (min-width: 900px) {
+  .adventure-paragraph {
+    font-size: 4rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .adventure-paragraph {
+    font-size: 3rem;
+  }
 }
 
 @media (min-width: 1100px) {
   .adventure-paragraph {
-    z-index: 0;
-    font-size: 3rem;
-    height: 40rem;
-    padding: 3rem;
-    width: 50vw;
-    margin: 0;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transition: 1rem;
-    transition: 1rem;
+    font-size: 5rem;
+    padding: 0 3rem 0 3rem;
+    height: 100vh;
   }
 }
 
-#a1:hover #a2 {
+.adventure-text:hover + .adventure-paragraph {
   opacity: 1;
 }
 
