@@ -145,16 +145,19 @@
   @include desktop {
     height: 10rem;
     width: 10rem;
-    border-radius: 10rem;
-    background-color: white;
+    //border-radius: 10rem;
+    //background-color: white;
     transition: 0.2s;
+    font-size: 3rem;
   }
   @include laptop {
+    /*
     height: 10rem;
     width: 10rem;
     border-radius: 10rem;
     background-color: white;
     transition: 0.2s;
+    */
 }
 }
 

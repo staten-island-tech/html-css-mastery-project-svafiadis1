@@ -110,7 +110,7 @@
   }
 }
 
-.explore:hover {
+.explore-outline:hover .explore{
   @include desktop {
     transform: scale(1.4);
   }
