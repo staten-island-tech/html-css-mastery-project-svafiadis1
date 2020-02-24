@@ -141,23 +141,15 @@
   }
   }
 
-.splash-button {
+.material-icons.splash-button {
+  font-size: 0rem;
+  transition: 0.3s;
+    color: white;
   @include desktop {
-    height: 10rem;
-    width: 10rem;
-    //border-radius: 10rem;
-    //background-color: white;
-    transition: 0.2s;
-    font-size: 3rem;
+    font-size: 8rem;
   }
   @include laptop {
-    /*
-    height: 10rem;
-    width: 10rem;
-    border-radius: 10rem;
-    background-color: white;
-    transition: 0.2s;
-    */
+    font-size: 7rem;
 }
 }
 
@@ -169,4 +161,3 @@
     transform: scale(1.3);
   }
 }
-
