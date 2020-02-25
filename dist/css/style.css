@@ -980,6 +980,7 @@ body {
   width: 30rem;
   -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1;
 }
 
 @media (min-width: 1500px) {
@@ -993,10 +994,22 @@ body {
 .circle-image1 {
   background-image: url(../media/beach1.jpg);
   background-size: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .circle-image2 {
   background-image: url(../media/greek-ruins.jpg);
   background-size: cover;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.circle-image1:hover {
+  opacity: 0%;
+}
+
+.circle-image1:hover + .circle-image2 {
+  opacity: 0%;
 }
 /*# sourceMappingURL=style.css.map */

@@ -17,6 +17,7 @@
     height: 30rem;
     width: 30rem;
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1;
     @include desktop{
     border-radius: 60rem;
     height: 60rem;
@@ -24,12 +25,23 @@
     }
 }
 
+
 .circle-image1{
     background-image: url(../media/beach1.jpg);
     background-size: cover;
+    transition: 0.2s;
 }
 
 .circle-image2{
     background-image: url(../media/greek-ruins.jpg);
     background-size: cover;
+    transition: 0.2s;
+}
+
+.circle-image1:hover{
+    opacity: 0%;
+}
+
+.circle-image1:hover + .circle-image2{
+    opacity: 0%;
 }
