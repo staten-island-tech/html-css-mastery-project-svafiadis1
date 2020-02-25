@@ -829,8 +829,6 @@ body {
   .staircase-container {
     height: 100vh;
     width: 40vw;
-    -webkit-filter: sepia(20%);
-            filter: sepia(20%);
   }
 }
 
@@ -941,11 +939,6 @@ body {
   opacity: 1;
 }
 
-.staircase-container:hover {
-  -webkit-filter: none;
-          filter: none;
-}
-
 .fourth-content-block {
   height: 100vh;
   width: 100vw;
@@ -958,8 +951,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -971,6 +965,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
 }
 
@@ -980,7 +976,7 @@ body {
   width: 30rem;
   -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  margin: 3rem;
 }
 
 @media (min-width: 1500px) {
@@ -988,6 +984,8 @@ body {
     border-radius: 60rem;
     height: 60rem;
     width: 60rem;
+    z-index: 1;
+    margin: 0rem;
   }
 }
 
@@ -1005,11 +1003,26 @@ body {
   transition: 0.2s;
 }
 
-.circle-image1:hover {
-  opacity: 0%;
+@media (min-width: 1500px) {
+  .circle-image1:hover {
+    opacity: 0%;
+  }
 }
 
-.circle-image1:hover + .circle-image2 {
-  opacity: 0%;
+@media (min-width: 1500px) {
+  .circle-image1:hover + .circle-image2 {
+    opacity: 0%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .circle-image-hover {
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50rem;
+    background-color: red;
+    position: absolute;
+    z-index: 3;
+  }
 }
 /*# sourceMappingURL=style.css.map */

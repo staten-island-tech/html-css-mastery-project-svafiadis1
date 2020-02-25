@@ -36,7 +36,6 @@
     @include desktop{
       height: 100vh;
       width: 40vw;
-      filter: sepia(20%);
     }
   }
 
@@ -108,8 +107,4 @@
   
   .adventure-text:hover + .adventure-paragraph{
     opacity: 1;
-  }
-
-  .staircase-container:hover{
-    filter: none;
   }
