@@ -147,9 +147,11 @@
     color: white;
   @include desktop {
     font-size: 8rem;
+    transition: 1s;
   }
   @include laptop {
     font-size: 7rem;
+    transition: 1s;
 }
 }
 
@@ -159,5 +161,14 @@
   }
   @include laptop{
     transform: scale(1.3);
+  }
+}
+
+.splash-button:hover{
+  @include laptop{
+    transform: scale(1.3) rotate(360deg);
+  }
+  @include desktop{
+    transform: scale(1.3) rotate(360deg);
   }
 }

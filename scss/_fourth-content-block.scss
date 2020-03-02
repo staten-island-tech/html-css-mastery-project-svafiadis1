@@ -7,6 +7,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(to bottom right, #7985e5, #f1d9d7);
+  @include laptop{
+    flex-direction: row;
+    justify-content: space-around;
+  }
   @include desktop {
     flex-direction: row;
     justify-content: space-around;
@@ -15,13 +20,22 @@
 
 .circle-image {
   border-radius: 3rem;
-  height: 30rem;
+  height: auto;
   width: 30rem;
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   margin: 3rem;
+  @include tablet{
+    height: auto;
+    width: 50rem;
+  }
+  @include laptop{
+    height: 35rem;
+    width: auto;
+    margin: 0rem;
+  }
   @include desktop {
-    height: 60rem;
-    width: 60rem;
+    height: 40rem;
+    width: auto;
     z-index: 3;
     margin: 0rem;
   }

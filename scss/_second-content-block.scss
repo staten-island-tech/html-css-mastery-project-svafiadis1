@@ -49,6 +49,9 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  @include laptop{
+    transition: 0.5s;
+  }
   @include desktop {
     width: 50rem;
     height: 15rem;
@@ -91,6 +94,9 @@
   height: 5rem;
   align-self: center;
   text-transform: uppercase;
+  @include laptop{
+    transition: 0.5s;
+  }
   @include desktop {
     font-size: 9rem;
     margin: 0;
