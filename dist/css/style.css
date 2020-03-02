@@ -307,6 +307,11 @@ body {
   }
 }
 
+.explore-scroll {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .second-content-block {
   height: 100vh;
   width: 100vw;
@@ -1022,6 +1027,8 @@ body {
   -webkit-box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
           box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   margin: 3rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 600px) {
