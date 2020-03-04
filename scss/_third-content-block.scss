@@ -24,8 +24,7 @@
     width: 100vw;
     padding: 0rem;
     margin: 0rem;
-    background-position: bottom;
-    transition: 0.5s;
+    transition: 0.7s;
     @include tablet{
       height: 100vh;
     }
@@ -36,6 +35,12 @@
     @include desktop{
       height: 100vh;
       width: 40vw;
+    }
+  }
+
+  .staircase-container:hover{
+    @include desktop{
+      background-image: url(../media/cat.jpg);
     }
   }
 

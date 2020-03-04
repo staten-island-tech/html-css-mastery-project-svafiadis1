@@ -27,6 +27,7 @@
   margin: 0rem;
   @include desktop{
     width: 99vw;
+    background-attachment: fixed;
   }
   @include tablet{
     width: 100vw;
