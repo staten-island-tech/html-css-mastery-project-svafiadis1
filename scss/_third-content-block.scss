@@ -38,11 +38,13 @@
     }
   }
 
+  
   .staircase-container:hover{
     @include desktop{
       background-image: url(../media/cat.jpg);
     }
   }
+  
 
   .adventure-text-container{
     height: 40vh;

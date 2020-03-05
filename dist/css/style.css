@@ -1093,6 +1093,10 @@ body {
   display: flex;
   padding: 0rem;
   margin: 0rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 1500px) {
@@ -1103,7 +1107,7 @@ body {
 
 .divide {
   height: 30vh;
-  width: auto;
+  width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
