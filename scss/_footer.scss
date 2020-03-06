@@ -64,11 +64,12 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s;
+    border-radius: 5px;
+    margin: 3rem;
     @include desktop{
         height: 7rem;
         width: 20rem;
         margin: 10rem;
-        border-radius: 5px;
     }
 }
 

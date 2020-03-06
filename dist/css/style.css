@@ -1185,6 +1185,8 @@ body {
           justify-content: center;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  border-radius: 5px;
+  margin: 3rem;
 }
 
 @media (min-width: 1500px) {
@@ -1192,7 +1194,6 @@ body {
     height: 7rem;
     width: 20rem;
     margin: 10rem;
-    border-radius: 5px;
   }
 }
 
