@@ -84,11 +84,17 @@
 }
 
 .subscribe-button:active {
+  @include desktop{
   filter: hue-rotate(90deg);
   transform: scale(1.3) rotate(5deg);
+  }
 }
 .subscribe-button:hover {
+  filter: hue-rotate(90deg);
+  transform: scale(1.3) rotate(5deg);
+  @include desktop{
   cursor: pointer;
+  }
 }
 
 .email:focus {
