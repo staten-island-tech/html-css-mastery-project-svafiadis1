@@ -147,8 +147,10 @@
   .staircase-container:hover .staircase-paragraph{
     @include laptop{
       opacity: 1;
+      color: black;
     }
     @include desktop{
-         opacity: 1;
+      opacity: 1;
+      color: black;
     }
   }
