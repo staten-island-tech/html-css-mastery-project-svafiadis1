@@ -8,10 +8,10 @@
   align-items: center;
   padding: 0rem;
   margin: 0rem;
-  @include desktop{
+  @include desktop {
     width: 99vw;
   }
-  @include tablet{
+  @include tablet {
     width: 100vw;
   }
 }
@@ -25,11 +25,11 @@
   background-position: top;
   padding: 0rem;
   margin: 0rem;
-  @include desktop{
+  @include desktop {
     width: 99vw;
     background-attachment: fixed;
   }
-  @include tablet{
+  @include tablet {
     width: 100vw;
   }
 }
@@ -55,8 +55,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-  } 
-  @include tablet-rotated{
+  }
+  @include tablet-rotated {
     width: 20rem;
     justify-content: flex-start;
     display: flex;
@@ -70,7 +70,6 @@
     flex-direction: column;
     justify-content: start;
   }
-
 }
 
 @keyframes blur-fade-in {
@@ -104,13 +103,13 @@
     font-size: 15rem;
     padding: 0px;
     transition: 0.3s;
-}
+  }
 }
 
 @keyframes title-float-in {
   0% {
     opacity: 20%;
-    transform: translate(-100%,0%);
+    transform: translate(-100%, 0%);
   }
   50% {
     opacity: 50%;
@@ -141,21 +140,21 @@
     flex-direction: column;
     margin: 3rem;
   }
-  @include laptop{
-      height: 20rem;
-      width: 30rem;
-      justify-content: space-around;
-      align-items: center;
-      display: flex;
-      flex-direction: column;
-      margin: 3rem;
+  @include laptop {
+    height: 20rem;
+    width: 30rem;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
   }
-  }
+}
 
 .material-icons.splash-button {
   font-size: 0rem;
   transition: 0.3s;
-    color: white;
+  color: white;
   @include desktop {
     font-size: 8rem;
     transition: 1s;
@@ -165,146 +164,130 @@
     font-size: 7rem;
     transition: 1s;
     margin: 3rem;
-}
+  }
 }
 
-.splash-button:active{
-  @include desktop{
+.splash-button:active {
+  @include desktop {
     transform: scale(1.3);
   }
-  @include laptop{
+  @include laptop {
     transform: scale(1.3);
   }
 }
 
-.splash-button:hover{
-  @include laptop{
+.splash-button:hover {
+  @include laptop {
     transform: scale(1.3) rotate(360deg);
   }
-  @include desktop{
+  @include desktop {
     transform: scale(1.3) rotate(360deg);
   }
 }
 
-.explore-scroll{
+.explore-scroll {
   transition: 0.5s;
 }
 
 //navigation code below
 
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 50px;
-  
+
   z-index: 1;
-  
+
   -webkit-user-select: none;
   user-select: none;
 }
 
-#menuToggle a
-{
+#menuToggle a {
   text-decoration: none;
   color: #232323;
-  font-family: 'Signika', sans-serif;
+  font-family: "Signika", sans-serif;
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
-{
+#menuToggle a:hover {
   color: #7985e5;
 }
 
-
-#menuToggle input
-{
+#menuToggle input {
   display: block;
   width: 40px;
   height: 32px;
   position: absolute;
   top: -7px;
   left: -5px;
-  
+
   cursor: pointer;
-  
+
   opacity: 0;
-  z-index: 2; 
-  
+  z-index: 2;
+
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
-{
+#menuToggle span {
   height: 0;
   width: 0;
-  @include laptop{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: white;
-  border-radius: 3px;
-  z-index: 1;
-  right: 1rem;
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  @include laptop {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    z-index: 1;
+    right: 1rem;
+    transform-origin: 4px 0px;
 
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
-  @include desktop{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: white;
-  border-radius: 3px;
-  z-index: 1;
-  right: 1rem;
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+  @include desktop {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: white;
+    border-radius: 3px;
+    z-index: 1;
+    right: 1rem;
+    transform-origin: 4px 0px;
 
-    }
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
-{
+#menu {
   position: absolute;
   width: 30rem;
   margin: -6rem 0 0 -3rem;
@@ -318,28 +301,26 @@
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul
-{
-  transform: translate(105%,0%);
+#menuToggle input:checked ~ ul {
+  transform: translate(105%, 0%);
 }
 
-.navigation-box{
+.navigation-box {
   height: 0;
   width: 0;
-  @include laptop{
+  @include laptop {
     padding: 6rem;
   }
-  @include desktop{
+  @include desktop {
     padding: 6rem;
   }
 }

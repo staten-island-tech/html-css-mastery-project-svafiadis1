@@ -24,7 +24,10 @@
     width: 100vw;
     padding: 0rem;
     margin: 0rem;
-    transition: 0.7s;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    display: flex;
     @include tablet{
       height: 100vh;
     }
@@ -40,8 +43,11 @@
 
   
   .staircase-container:hover{
+    @include laptop{
+      opacity: .5;
+    }
     @include desktop{
-      background-image: url(../media/cat.jpg);
+      opacity: .5;
     }
   }
   
@@ -114,4 +120,35 @@
   
   .adventure-text:hover + .adventure-paragraph{
     opacity: 1;
+  }
+
+  .staircase-paragraph{
+    opacity: 0;
+    font-family: Work Sans;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: .5s;
+    font-size: 1.8rem;
+    color: black;
+    @include tablet{
+      font-size: 3rem;
+    }
+    @include laptop{
+      font-size: 4rem;
+    }
+    @include desktop{
+      font-size: 5rem;
+      padding: 0 3rem 0 3rem;
+  }
+}
+
+  .staircase-container:hover .staircase-paragraph{
+    @include laptop{
+      opacity: 1;
+    }
+    @include desktop{
+         opacity: 1;
+    }
   }

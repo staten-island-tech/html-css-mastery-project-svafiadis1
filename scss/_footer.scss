@@ -24,11 +24,15 @@
   height: 5rem;
   width: 5rem;
   margin: 10px;
+  transition: 0.5s;
+  @include laptop {
+    height: 8rem;
+    width: auto;
+  }
   @include desktop {
     height: 20rem;
     width: auto;
     margin: 6rem;
-    transition: 0.5s;
   }
 }
 
@@ -40,16 +44,21 @@
 }
 
 .social-media-icon:hover {
-  @include desktop {
-    transform: scale(1.5);
-    filter: hue-rotate(90deg);
-  }
+  transform: scale(1.5);
+  filter: hue-rotate(90deg);
 }
 
 .email {
   box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
   font-family: "Work Sans", sans-serif;
   color: gray;
+  width: 25rem;
+  @include laptop {
+    height: 5rem;
+    width: 80rem;
+    border-radius: 1rem;
+    font-size: 3rem;
+  }
   @include desktop {
     height: 7rem;
     width: 105rem;
@@ -67,6 +76,10 @@
   transition: 0.2s;
   border-radius: 5px;
   margin: 3rem;
+  @include laptop {
+    height: 5rem;
+    width: 15rem;
+  }
   @include desktop {
     height: 7rem;
     width: 20rem;
@@ -77,6 +90,9 @@
 .subscribe {
   color: white;
   font-family: "Signika", sans-serif;
+  @include laptop {
+    font-size: 3rem;
+  }
   @include desktop {
     font-size: 4rem;
     margin: 0;
@@ -84,22 +100,21 @@
 }
 
 .subscribe-button:active {
-  @include desktop{
-  filter: hue-rotate(90deg);
-  transform: scale(1.3) rotate(5deg);
+  @include laptop {
+    filter: hue-rotate(90deg);
+    transform: scale(1.3) rotate(5deg);
+  }
+  @include desktop {
+    filter: hue-rotate(90deg);
+    transform: scale(1.3) rotate(5deg);
   }
 }
+
 .subscribe-button:hover {
-  filter: hue-rotate(90deg);
-  transform: scale(1.3) rotate(5deg);
-  @include desktop{
   cursor: pointer;
-  }
 }
 
 .email:focus {
   background-color: #efefef;
   color: black;
 }
-
-
