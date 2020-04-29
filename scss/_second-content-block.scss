@@ -49,6 +49,10 @@
   margin: 0;
   display: flex;
   justify-content: center;
+  @include tablet-rotated{
+    width: 40rem;
+    height: 15rem;
+  }
   @include laptop{
     transition: 0.5s;
   }
@@ -91,9 +95,11 @@
   color: white;
   font-size: 4rem;
   font-family: "Work Sans", sans-serif;
-  height: 5rem;
   align-self: center;
   text-transform: uppercase;
+  @include tablet-rotated{
+    font-size: 8rem;
+  }
   @include laptop{
     transition: 0.5s;
   }
@@ -195,8 +201,11 @@ flex-direction: column;
   left: 0;
   z-index: 1;
   transition: all 1s;
+  @include tablet-rotated{
+    height: 40rem;
+  }
   @include desktop{
-  width: 40rem
+  height: 50rem;
   }
 }
 
@@ -208,6 +217,9 @@ flex-direction: column;
   z-index: 0;
   transform: rotateY(-180deg);
   transition: all 1s;
+  @include tablet-rotated{
+    height: 40rem;
+  }
   @include desktop{
   height: 50rem;
   }
